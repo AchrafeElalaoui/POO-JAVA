@@ -198,7 +198,7 @@ To display this number we use the following code :
         }
 ```
 #### example result :
-```
+```java
 saisir le nombre d'etudient : 5
 saisir la note de l'etudient 1: 12.5
 saisir la note de l'etudient 2: 14.0
