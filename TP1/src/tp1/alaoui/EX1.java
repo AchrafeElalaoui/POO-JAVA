@@ -8,36 +8,35 @@ public class EX1 {
         Scanner in=new Scanner(System.in);
         EX1 ex1=new EX1();
 
-        System.out.println("saisir lr nombre d'etudient ");
+        System.out.print("saisir le nombre d'etudient : ");
         int n= in.nextInt();
 
         float[] nots= new float[n];
         for (int i = 0; i < nots.length; i++) {
-            System.out.println("saisir la note de l'etudient "+(i+1));
+            System.out.print("saisir la note de l'etudient "+(i+1)+": ");
             nots[i]=in.nextFloat();
         }
         float[] notsTriee= ex1.trierNots(nots);
 
-        System.out.println("les note triee");
+        System.out.println("les note triee :");
         for (int i = 0; i < notsTriee.length; i++) {
             System.out.println(notsTriee[i]);
         }
 
-        System.out.printf("\n");
 
-        System.out.println("moyenne du notes");
-        float moyenne=ex1.moyNots(nots);
-        System.out.println(moyenne);
 
-        System.out.printf("\n");
+        System.out.println("moyenne du notes :" + ex1.moyNotes(nots));
 
-        System.out.println("le max des notes est "+ex1.maxNots(notsTriee));
-        System.out.printf("\n");
-        System.out.println("le min des notes est "+ex1.minNots(notsTriee));
 
-        System.out.printf("\n");
 
-        System.out.println("saisir une note");
+
+        System.out.println("le max des notes est "+ex1.maxNotes(notsTriee));
+
+        System.out.println("le min des notes est "+ex1.minNotes(notsTriee));
+
+
+
+        System.out.print("saisir une note");
         float not = in.nextFloat();
         System.out.println("le nombre d'etudients ayant la note "+not+" est "+ex1.nbrEtudient(nots, not));
     }
@@ -54,7 +53,7 @@ public class EX1 {
         }
         return tab;
     }
-    public float moyNots(float[] tab) {
+    public float moyNotes(float[] tab) {
         float somme=0,moyenne;
         for (int i = 0; i < tab.length; i++) {
             somme+=tab[i];
@@ -62,7 +61,7 @@ public class EX1 {
         moyenne=somme/tab.length;
         return moyenne;
     }
-    public float maxNots(float[] tab) {
+    public float maxNotes(float[] tab) {
         float max=tab[0];
         for (int i = 0; i < tab.length; i++) {
             if(max<tab[i]) {
@@ -71,7 +70,7 @@ public class EX1 {
         }
         return max;
     }
-    public float minNots(float[] tab) {
+    public float minNotes(float[] tab) {
         float min=tab[0];
         for (int i = 0; i < tab.length; i++) {
             if(min>tab[i]) {
