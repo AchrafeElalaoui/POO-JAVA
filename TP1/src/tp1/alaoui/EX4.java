@@ -1,6 +1,15 @@
 package tp1.alaoui;
 
+import java.util.Scanner;
+
 public class EX4 {
+    public static void main(String[] args) {
+        EX4 ex4= new EX4();
+        Scanner in4=new Scanner(System.in);
+        System.out.println("saisir une chain de caractire");
+        String ch =in4.nextLine();
+        ex4.calNbrOcc(ch);
+    }
 
     public void calNbrOcc(String str) {
         int[] tab= new int[26];

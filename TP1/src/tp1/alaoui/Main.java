@@ -67,8 +67,8 @@ public class Main {
             }
 
             System.out.println("saisir 'r' pour une autre fonction");
-            r=in32.next();
-        }while(!r.equals("r"));
+            r=in32.nextLine();
+        }while(r.equals("r"));
 
         EX4 ex4= new EX4();
         Scanner in4=new Scanner(System.in);
