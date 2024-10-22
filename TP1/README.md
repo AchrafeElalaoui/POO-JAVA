@@ -217,4 +217,45 @@ le min des notes est 10.0
 saisir une note: 14.0
 le nombre d'etudients ayant la note 14.0 est 1
 ```
+## EXERCISE 2
+In french there is a lot  of types of verbs like verb of the first group ...,in this exercise we will create a program that reads a verb of type "first group" and displays its conjugation in the present tense.
+a verb of type "first group" is characterized by his tow last letters "er" .
+The conjugation of a first group verb is done in the following manner :
+let's take "chanter" as exemple ,the conjugation the verb is :
+" je chante
+tu chantes
+il chante
+nous chantons
+vous chantez
+ils chantent "
+So for create our programme we need to read the verb entred by user using the following code :
+```java
+        Scanner in2=new Scanner(System.in);
+
+        System.out.println("saisir une verbe de premier groupe");
+        String v = in2.nextLine();
+```
+We need also to compare the last tow litters and the string "er", to see if the verb is in the first group , to do that it is emportant to change what ever string the user entres to lower case , that makes us to not do two compares(compare the last tow litters with the string "er" and with "ER" ) ,after the comparison returns `true` we display the previous form of the verb, to do that we use the following code : 
+```java
+ String verbe=v.toLowerCase();
+        ex2.conjuger( verbe);
+        // the function conjuger()
+    }
+    public void conjuger(String verbe) {
+        String er=verbe.substring(verbe.length()-2);
+        if(er.equals("er")) {
+            String str=verbe.substring(0, verbe.length()-2);
+            System.out.println("je "+str+"e");
+            System.out.println("tu "+str+"es");
+            System.out.println("il "+str+"e");
+            System.out.println("nous "+str+"ons");
+            System.out.println("vous "+str+"ez");
+            System.out.println("ils "+str+"ent");
+        }
+        else
+            System.out.println("le verbe "+verbe+" n'est pas du premier groupe");
+
+    }
+```
+
 
