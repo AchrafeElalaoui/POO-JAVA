@@ -1,13 +1,21 @@
 package tp1.alaoui;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class EX1 {
     public static void main(String[] args) {
         Scanner in1=new Scanner(System.in);
-
+        Scanner in2=new Scanner(System.in);
         EX1 ex1=new EX1();
-        float[] nots= {14,13,9,(float)18.25,17,14};
+        System.out.println("saisir lr nombre d'etudient ");
+        int n= in2.nextInt();
+        float[] nots= new float[n];
+        System.out.println("les note triee");
+        for (int i = 0; i < nots.length; i++) {
+            System.out.println("saisir la note de l'etudient "+(i+1));
+            nots[i]=in1.nextFloat();
+        }
         float[] notsTriee= ex1.trierNots(nots);
 
         System.out.println("les note triee");
@@ -15,19 +23,19 @@ public class EX1 {
             System.out.println(notsTriee[i]);
         }
 
-        System.out.printf("\n\n");
+        System.out.printf("\n");
 
         System.out.println("moyenne des notes");
         float moyenne=ex1.moyNots(nots);
         System.out.println(moyenne);
 
-        System.out.printf("\n\n");
+        System.out.printf("\n");
 
         System.out.println("le max des notes est "+ex1.maxNots(notsTriee));
-        System.out.printf("\n\n");
+        System.out.printf("\n");
         System.out.println("le min des notes est "+ex1.minNots(notsTriee));
 
-        System.out.printf("\n\n");
+        System.out.printf("\n");
 
         System.out.println("saisir une note");
         float not = in1.nextFloat();
