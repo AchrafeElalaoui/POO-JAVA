@@ -1,20 +1,20 @@
 package tp1.alaoui;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class EX1 {
     public static void main(String[] args) {
-        Scanner in1=new Scanner(System.in);
-        Scanner in2=new Scanner(System.in);
+        Scanner in=new Scanner(System.in);
         EX1 ex1=new EX1();
+
         System.out.println("saisir lr nombre d'etudient ");
-        int n= in2.nextInt();
+        int n= in.nextInt();
+
         float[] nots= new float[n];
-        System.out.println("les note triee");
         for (int i = 0; i < nots.length; i++) {
             System.out.println("saisir la note de l'etudient "+(i+1));
-            nots[i]=in1.nextFloat();
+            nots[i]=in.nextFloat();
         }
         float[] notsTriee= ex1.trierNots(nots);
 
@@ -38,7 +38,7 @@ public class EX1 {
         System.out.printf("\n");
 
         System.out.println("saisir une note");
-        float not = in1.nextFloat();
+        float not = in.nextFloat();
         System.out.println("le nombre d'etudients ayant la note "+not+" est "+ex1.nbrEtudient(nots, not));
     }
     public float[] trierNots(float[] tab) {

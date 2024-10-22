@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class EX3 {
     public static void main(String[] args) {
         EX3 ex3 =new EX3();
-        Scanner in31=new Scanner(System.in);
-        Scanner in32=new Scanner(System.in);
+        Scanner in=new Scanner(System.in);
+        //Scanner in32=new Scanner(System.in);
         String r;
         int nbrFon;
         do {
@@ -22,7 +22,8 @@ public class EX3 {
 
             do {
                 System.out.println("saisir une nombre entre 1 et 4");
-                nbrFon=in31.nextInt();
+                nbrFon=in.nextInt();
+                in.nextLine();
             }while((nbrFon<1 || nbrFon>4));
 
 
@@ -38,7 +39,7 @@ public class EX3 {
             }
 
             System.out.println("saisir 'r' pour une autre fonction");
-            r=in32.nextLine();
+            r=in.nextLine();
         }while(r.equals("r"));
 
     }
