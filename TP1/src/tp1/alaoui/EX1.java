@@ -25,7 +25,7 @@ public class EX1 {
 
         System.out.printf("\n");
 
-        System.out.println("moyenne des notes");
+        System.out.println("moyenne du notes");
         float moyenne=ex1.moyNots(nots);
         System.out.println(moyenne);
 
