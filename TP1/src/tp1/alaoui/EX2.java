@@ -8,7 +8,7 @@ public class EX2 {
 
         Scanner in2=new Scanner(System.in);
 
-        System.out.println("saisir une verbe de premier groupe");
+        System.out.print("saisir une verbe de premier groupe");
         String v = in2.nextLine();
         String verbe=v.toLowerCase();
         ex2.conjuger( verbe);
