@@ -1,6 +1,6 @@
 # TP1
 this practical work (tp) is a group of exercises in "Arrays and strings" ,for see the practical work click [her](https://github.com/AchrafeElalaoui/POO-JAVA/blob/main/TP1/practical%20work%201.pdf) .
-in this file i will explain how i solve these exercises .
+in this file i will explain how i solve these exercises with java .
 Beginning with the first exercise 
 ## EXERCISE 1
 In this exercise we will build a programme ,in which, we will receive student notes entered on the keyboard and put them in a table ,the programme allows the following operations to be carried out:
@@ -237,22 +237,22 @@ So for create our programme we need to read the verb entred by user using the fo
 ```
 We need also to compare the last tow litters and the string "er", to see if the verb is in the first group , to do that it is emportant to change what ever string the user entres to lower case , that makes us to not do two compares(compare the last tow litters with the string "er" and with "ER" ) ,after the comparison returns `true` we display the previous form of the verb, to do that we use the following code : 
 ```java
- String verbe=v.toLowerCase();
-        ex2.conjuger( verbe);
-        // the function conjuger()
-    }
-    public void conjuger(String verbe) {
-        String er = verbe.substring(verbe.length() - 2);
-        if (er.equals("er")) {
-            String str = verbe.substring(0, verbe.length() - 2);
-            System.out.println("je " + str + "e");
-            System.out.println("tu " + str + "es");
-            System.out.println("il " + str + "e");
-            System.out.println("nous " + str + "ons");
-            System.out.println("vous " + str + "ez");
-            System.out.println("ils " + str + "ent");
-        }
-    }
+            String verbe=v.toLowerCase();
+            ex2.conjuger( verbe);
+                // the function conjuger()
+            }
+            public void conjuger(String verbe) {
+                String er = verbe.substring(verbe.length() - 2);
+                if (er.equals("er")) {
+                    String str = verbe.substring(0, verbe.length() - 2);
+                    System.out.println("je " + str + "e");
+                    System.out.println("tu " + str + "es");
+                    System.out.println("il " + str + "e");
+                    System.out.println("nous " + str + "ons");
+                    System.out.println("vous " + str + "ez");
+                    System.out.println("ils " + str + "ent");
+                }
+            }
 ```
 if the comparison returns `false` we use :
 ```java
@@ -261,38 +261,38 @@ if the comparison returns `false` we use :
 ```
 #### code source :
 ```java
-package tp1.alaoui;
-
-import java.util.Scanner;
-
-public class EX2 {
-    public static void main(String[] args) {
-        EX2 ex2 =new EX2();
-
-        Scanner in2=new Scanner(System.in);
-
-        System.out.print("saisir une verbe de premier groupe");
-        String v = in2.nextLine();
-        String verbe=v.toLowerCase();
-        ex2.conjuger( verbe);
-    }
-    public void conjuger(String verbe) {
-        String er=verbe.substring(verbe.length()-2);
-        if(er.equals("er")) {
-            String str=verbe.substring(0, verbe.length()-2);
-            System.out.println("je "+str+"e");
-            System.out.println("tu "+str+"es");
-            System.out.println("il "+str+"e");
-            System.out.println("nous "+str+"ons");
-            System.out.println("vous "+str+"ez");
-            System.out.println("ils "+str+"ent");
+        package tp1.alaoui;
+        
+        import java.util.Scanner;
+        
+        public class EX2 {
+            public static void main(String[] args) {
+                EX2 ex2 =new EX2();
+        
+                Scanner in2=new Scanner(System.in);
+        
+                System.out.print("saisir une verbe de premier groupe");
+                String v = in2.nextLine();
+                String verbe=v.toLowerCase();
+                ex2.conjuger( verbe);
+            }
+            public void conjuger(String verbe) {
+                String er=verbe.substring(verbe.length()-2);
+                if(er.equals("er")) {
+                    String str=verbe.substring(0, verbe.length()-2);
+                    System.out.println("je "+str+"e");
+                    System.out.println("tu "+str+"es");
+                    System.out.println("il "+str+"e");
+                    System.out.println("nous "+str+"ons");
+                    System.out.println("vous "+str+"ez");
+                    System.out.println("ils "+str+"ent");
+                }
+                else
+                    System.out.println("le verbe "+verbe+" n'est pas du premier groupe");
+        
+            }
+        
         }
-        else
-            System.out.println("le verbe "+verbe+" n'est pas du premier groupe");
-
-    }
-
-}
 ```
 #### example result :
 ```text
@@ -308,5 +308,59 @@ ils mangent
 saisir une verbe de premier groupe: finir
 le verbe finir n'est pas du premier groupe
 ```
-
+## EXERCISE 1
+in this exercise we will create a Java program that can perform a set of operations on any string of characters entered from the keyboard. This program consists of a menu with the choice of the operation to be performed .The operations on this string are as follows :
+1. `saisir()` :
+read a string from the keyboard and store it in a variable,we can do it by the following code:
+```java
+        Scanner in=new Scanner(System.in);
+        String mot;
+        public void saisir() {
+            mot =in.nextLine();
+    
+        }
+```
+2. `afficher()` :
+display the entered string using the code :
+```java
+        public void afficher() {
+                System.out.println("le mot est :"+mot);
+        }
+```
+3. `inverser()` :
+reverse the entered string using the code:
+```java
+        public void inverser() {
+            String reverse = "";
+        
+            for (int i = mot.length() - 1; i >= 0; i--) {
+                reverse += mot.charAt(i);
+            }
+            System.out.println("le mot est :"+reverse);
+        }
+```
+4. `nbrMots()` :
+count the number of words in the string using the code :
+```java
+        public void nbrMots() {
+            String[] str =mot.split(" ");
+            int i=0;
+            for (String string : str) {
+                i++;
+            }
+            System.out.println("le nombre de mots est :"+i);
+        }
+```
+The character ‘ ’ (space) is considered the word separator character. so we use the function `split()`  It is part of the `String` class is used to split a string into an array of substrings based on a specified delimiter (' ' in our case).
+so our menu will be written like :
+```java
+         System.out.println("----------------------MENU------------------------");
+         System.out.print("\n");
+         System.out.println("entrer 1 pour SAISIR");
+         System.out.println("entrer 2 pour AFFICHER");
+         System.out.println("entrer 3 pour INVERSER");
+         System.out.println("entrer 4 pour AFFICHER LE NOMBREDE MOTS");
+         System.out.print("\n");
+         System.out.println("--------------------------------------------------");
+```
 
