@@ -352,7 +352,8 @@ count the number of words in the string using the code :
         }
 ```
 The character ‘ ’ (space) is considered the word separator character. so we use the function `split()`  It is part of the `String` class is used to split a string into an array of substrings based on a specified delimiter (' ' in our case).
-so our menu will be written like :
+
+So our menu will be written like :
 ```java
          System.out.println("----------------------MENU------------------------");
          System.out.print("\n");
