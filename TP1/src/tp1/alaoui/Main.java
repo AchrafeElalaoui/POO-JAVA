@@ -15,11 +15,11 @@ public class Main {
         }
 
         System.out.println("moyenne des notes");
-        float moyenne=ex1.moyNots(nots);
+        float moyenne=ex1.moyNotes(nots);
         System.out.println(moyenne);
 
-        System.out.println("le max des notes est "+ex1.maxNots(notsTriee));
-        System.out.println("le min des notes est "+ex1.minNots(notsTriee));
+        System.out.println("le max des notes est "+ex1.maxNotes(notsTriee));
+        System.out.println("le min des notes est "+ex1.minNotes(notsTriee));
 
 
 

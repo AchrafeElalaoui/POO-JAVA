@@ -541,4 +541,79 @@ le nombre de mots est : 8
 saisir 'r' pour une autre fonction
 n
 ```
+## EXERCISE 4
+in the last exercise we will create a java program that reads a string `ch` from the keyboard and counts the occurrences of letters of the alphabet without distinguishing between upper and lower case.Useing an array `nb_occurrences` of dimension 26 to store the result.
+To do that we use `calNbrOcc()` function , which take the string `ch` as parameter and display the array `nb_occurrences` as the following code shows :
+```java
+public void calNbrOcc(String str) {
+        int[] nb_occurrences= new int[26];
+        String lowerStr=str.toLowerCase();
+        char[] charTab= {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < charTab.length; j++) {
+                if(lowerStr.charAt(i)==charTab[j]) {
+                    nb_occurrences[j]++;
+                }
+            }
+        }
+        for (int i = 0; i < nb_occurrences.length; i++) {
+            if(nb_occurrences[i]>0) {
+                System.out.println(nb_occurrences[i]+" fois la lettre '"+charTab[i]+"'");
+            }
+        }
 
+
+    }
+```
+And to change what ever the user entered to lower case (for not being confused between the upper and the lower case ) we used the function `toLowerCase()`,which is part of `String` class.
+#### code source :
+```java
+package tp1.alaoui;
+
+import java.util.Scanner;
+
+public class EX4 {
+    public static void main(String[] args) {
+        EX4 ex4= new EX4();
+        Scanner in4=new Scanner(System.in);
+        System.out.println("saisir une chain de caractire");
+        String ch =in4.nextLine();
+        ex4.calNbrOcc(ch);
+    }
+
+    public void calNbrOcc(String str) {
+        int[] nb_occurrences= new int[26];
+        String lowerStr=str.toLowerCase();
+        char[] charTab= {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < charTab.length; j++) {
+                if(lowerStr.charAt(i)==charTab[j]) {
+                    nb_occurrences[j]++;
+                }
+            }
+        }
+        for (int i = 0; i < nb_occurrences.length; i++) {
+            if(nb_occurrences[i]>0) {
+                System.out.println(nb_occurrences[i]+" fois la lettre '"+charTab[i]+"'");
+            }
+        }
+
+
+    }
+}
+```
+#### example result :
+```text
+saisir une chain de caractire
+achrafe elalaoui
+4 fois la lettre 'a'
+1 fois la lettre 'c'
+2 fois la lettre 'e'
+1 fois la lettre 'f'
+1 fois la lettre 'h'
+1 fois la lettre 'i'
+2 fois la lettre 'l'
+1 fois la lettre 'o'
+1 fois la lettre 'r'
+1 fois la lettre 'u'
+```
