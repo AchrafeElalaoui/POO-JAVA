@@ -308,7 +308,7 @@ ils mangent
 saisir une verbe de premier groupe: finir
 le verbe finir n'est pas du premier groupe
 ```
-## EXERCISE 1
+## EXERCISE 3
 in this exercise we will create a Java program that can perform a set of operations on any string of characters entered from the keyboard. This program consists of a menu with the choice of the operation to be performed .The operations on this string are as follows :
 1. `saisir()` :
 read a string from the keyboard and store it in a variable,we can do it by the following code:
@@ -363,5 +363,182 @@ So our menu will be written like :
          System.out.println("entrer 4 pour AFFICHER LE NOMBREDE MOTS");
          System.out.print("\n");
          System.out.println("--------------------------------------------------");
+```
+To make the user chose one of the operations and call it we use :
+```java
+        do {
+            System.out.println("saisir une nombre entre 1 et 4");
+            nbrFon=in.nextInt();
+            in.nextLine();
+        }while((nbrFon<1 || nbrFon>4));
+
+
+        switch(nbrFon) {
+            case 1:ex3.saisir();
+                break;
+            case 2:ex3.afficher();
+                break;
+            case 3:ex3.inverser();
+                break;
+            case 4:ex3.nbrMots();
+                break;
+        }
+```
+After each operation, the return to the menu is performed after the message "Press 'r' to return to the menu" is displayed by the following code:
+```java
+        do {
+            System.out.println("----------------------MENU------------------------");
+            System.out.print("\n");
+            System.out.println("entrer 1 pour SAISIR");
+            System.out.println("entrer 2 pour AFFICHER");
+            System.out.println("entrer 3 pour INVERSER");
+            System.out.println("entrer 4 pour AFFICHER LE NOMBREDE MOTS");
+            System.out.print("\n");
+            System.out.println("--------------------------------------------------");
+
+
+            do {
+                System.out.println("saisir une nombre entre 1 et 4");
+                nbrFon=in.nextInt();
+                in.nextLine();
+            }while((nbrFon<1 || nbrFon>4));
+
+
+            switch(nbrFon) {
+                case 1:ex3.saisir();
+                    break;
+                case 2:ex3.afficher();
+                    break;
+                case 3:ex3.inverser();
+                    break;
+                case 4:ex3.nbrMots();
+                    break;
+            }
+
+            System.out.println("saisir 'r' pour une autre fonction");
+            r=in.nextLine();
+        }while(r.equals("r"));
+```
+#### code source :
+```java
+package tp1.alaoui;
+
+import java.util.Scanner;
+
+public class EX3 {
+    public static void main(String[] args) {
+        EX3 ex3 =new EX3();
+        Scanner in=new Scanner(System.in);
+        //Scanner in32=new Scanner(System.in);
+        String r;
+        int nbrFon;
+        do {
+            System.out.println("----------------------MENU------------------------");
+            System.out.print("\n");
+            System.out.println("entrer 1 pour SAISIR");
+            System.out.println("entrer 2 pour AFFICHER");
+            System.out.println("entrer 3 pour INVERSER");
+            System.out.println("entrer 4 pour AFFICHER LE NOMBREDE MOTS");
+            System.out.print("\n");
+            System.out.println("--------------------------------------------------");
+
+
+            do {
+                System.out.println("saisir une nombre entre 1 et 4");
+                nbrFon=in.nextInt();
+                in.nextLine();
+            }while((nbrFon<1 || nbrFon>4));
+
+
+            switch(nbrFon) {
+                case 1:ex3.saisir();
+                    break;
+                case 2:ex3.afficher();
+                    break;
+                case 3:ex3.inverser();
+                    break;
+                case 4:ex3.nbrMots();
+                    break;
+            }
+
+            System.out.println("saisir 'r' pour une autre fonction");
+            r=in.nextLine();
+        }while(r.equals("r"));
+
+    }
+    Scanner in=new Scanner(System.in);
+
+    String mot;
+    public void saisir() {
+        mot =in.nextLine();
+
+    }
+    public void afficher() {
+        System.out.println("le mot est :"+mot);
+    }
+    public void inverser() {
+        String reverse = "";
+
+        for (int i = mot.length() - 1; i >= 0; i--) {
+            reverse += mot.charAt(i);
+        }
+        System.out.println("le mot est :"+reverse);
+    }
+    public void nbrMots() {
+        String[] str =mot.split(" ");
+        int i=0;
+        for (String string : str) {
+            i++;
+        }
+        System.out.println("le nombre de mots est :"+i);
+    }
+}
+```
+#### example result :
+```text
+----------------------MENU------------------------
+entrer 1 pour SAISIR
+entrer 2 pour AFFICHER
+entrer 3 pour INVERSER
+entrer 4 pour AFFICHER LE NOMBREDE MOTS
+--------------------------------------------------
+saisir une nombre entre 1 et 4
+1
+This is the string input for the example.
+saisir 'r' pour une autre fonction
+r
+----------------------MENU------------------------
+entrer 1 pour SAISIR
+entrer 2 pour AFFICHER
+entrer 3 pour INVERSER
+entrer 4 pour AFFICHER LE NOMBREDE MOTS
+--------------------------------------------------
+saisir une nombre entre 1 et 4
+2
+le mot est : This is the string input for the example.
+saisir 'r' pour une autre fonction
+r
+----------------------MENU------------------------
+entrer 1 pour SAISIR
+entrer 2 pour AFFICHER
+entrer 3 pour INVERSER
+entrer 4 pour AFFICHER LE NOMBREDE MOTS
+--------------------------------------------------
+saisir une nombre entre 1 et 4
+3
+le mot est : .elpmaxe eht rof tupni gnirts eht si sihT
+saisir 'r' pour une autre fonction
+r
+----------------------MENU------------------------
+entrer 1 pour SAISIR
+entrer 2 pour AFFICHER
+entrer 3 pour INVERSER
+entrer 4 pour AFFICHER LE NOMBREDE MOTS
+--------------------------------------------------
+saisir une nombre entre 1 et 4
+4
+le nombre de mots est : 8
+saisir 'r' pour une autre fonction
+n
 ```
 
