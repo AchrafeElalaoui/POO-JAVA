@@ -222,11 +222,16 @@ In french there is a lot  of types of verbs like verb of the first group ...,in 
 a verb of type "first group" is characterized by his tow last letters "er" .
 The conjugation of a first group verb is done in the following manner :
 let's take "chanter" as exemple ,the conjugation the verb is :
-" je chante
+" je chante 
+
 tu chantes
-il chante
-nous chantons
-vous chantez
+
+il chante 
+
+nous chantons 
+
+vous chantez 
+
 ils chantent "
 So for create our programme we need to read the verb entred by user using the following code :
 ```java

@@ -47,8 +47,8 @@ public class EX3 {
 
     String mot;
     public void saisir() {
-        String str =in.nextLine();
-        mot=str;
+        mot =in.nextLine();
+
     }
     public void afficher() {
         System.out.println("le mot est :"+mot);
