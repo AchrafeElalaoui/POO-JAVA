@@ -11,12 +11,10 @@ public class EX3 {
         int nbrFon;
         do {
             System.out.println("----------------------MENU------------------------");
-            System.out.print("\n");
             System.out.println("entrer 1 pour SAISIR");
             System.out.println("entrer 2 pour AFFICHER");
             System.out.println("entrer 3 pour INVERSER");
             System.out.println("entrer 4 pour AFFICHER LE NOMBREDE MOTS");
-            System.out.print("\n");
             System.out.println("--------------------------------------------------");
 
 
@@ -45,7 +43,7 @@ public class EX3 {
     }
     Scanner in=new Scanner(System.in);
 
-    String mot;
+    String mot="";
     public void saisir() {
         mot =in.nextLine();
 

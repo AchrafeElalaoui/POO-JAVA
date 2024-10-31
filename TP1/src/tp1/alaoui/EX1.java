@@ -17,7 +17,6 @@ public class EX1 {
             nots[i]=in.nextFloat();
         }
         float[] notsTriee= ex1.trierNots(nots);
-
         System.out.println("les note triee :");
         for (int i = 0; i < notsTriee.length; i++) {
             System.out.println(notsTriee[i]);
@@ -31,7 +30,6 @@ public class EX1 {
 
 
         System.out.println("le max des notes est "+ex1.maxNotes(notsTriee));
-
         System.out.println("le min des notes est "+ex1.minNotes(notsTriee));
 
 
