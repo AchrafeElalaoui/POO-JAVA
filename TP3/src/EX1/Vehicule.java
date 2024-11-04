@@ -18,9 +18,5 @@ public class Vehicule {
         }catch (TropViteException e){
             System.out.println(e.getMessage());
         }
-        System.out.println("affiche");
-
-
-
     }
 }
