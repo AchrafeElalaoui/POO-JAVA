@@ -11,6 +11,7 @@ public class Exercice1 {
         List<String> motsA =mots.stream()
                 .filter(s-> s.contains("a"))
                 .toList();
+        System.out.println("question 1");
         System.out.println(motsA);
         // Q2)
         List<String> motsI = (List<String>) mots.stream()
@@ -22,32 +23,38 @@ public class Exercice1 {
                     }
                     return s1;})
                 .toList();
+        System.out.println("question 2");
         System.out.println(motsI);
         // Q3)
         List<Character> c=mots.stream()
                 .filter(s ->s.contains("e"))
                 .flatMap(s -> s.chars().mapToObj(l->(char)l))
                 .toList();
+        System.out.println("question 3");
         System.out.println(c);
         // Q4)
         List<String> upperM=mots.stream()
                 .map(String::toUpperCase)
                 .toList();
+        System.out.println("question 4");
         System.out.println(upperM);
         // Q5)
         List<Integer> longeur=mots.stream()
                 .map(String::length)
                 .toList();
+        System.out.println("question 5");
         System.out.println(longeur);
         // Q6)
         List<List<Character>> lc=mots.stream()
                 .map(s -> s.chars().mapToObj(l->(char)l).toList())
                 .toList();
+        System.out.println("question 6");
         System.out.println(lc);
         // Q7)
         List<String> tList = IntStream.range(0, mots.size())
                 .mapToObj(index -> mots.get(index) + " - " + index)
                 .toList();
+        System.out.println("question 7");
         System.out.println(tList);
     }
 

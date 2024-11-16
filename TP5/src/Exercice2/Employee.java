@@ -43,32 +43,38 @@ public class Employee {
         double sal = employees.stream()
                 .mapToDouble(Employee::getSalaire)
                 .sum();
+        System.out.println("question 1");
         System.out.println("La somme totale des salaires est : " + sal);
         // Q2)
         List<Employee> sortEmployees = employees.stream()
                 .sorted(Comparator.comparing(Employee::getNom))
                 .toList();
+        System.out.println("question 2");
         System.out.println("Trié par nom  (ordre alphabétique) : ");
         sortEmployees.forEach(System.out::println);
         // Q3)
         Optional<Employee> minSal = employees.stream()
                 .min(Comparator.comparing(Employee::getSalaire));
+        System.out.println("question 3");
         System.out.println("L'employé avec le salaire le plus bas est : " + minSal.get());
         // Q4)
         double limitSal = 50000;
         List<Employee> fillteredEmployees = employees.stream()
                 .filter(e -> e.getSalaire() > limitSal)
                 .toList();
+        System.out.println("question 4");
         System.out.println("Employés avec un salaire supérieur à " + limitSal + " :");
         fillteredEmployees.forEach(System.out::println);
         // Q5)
         Optional<Employee> employeMaxSalaire = employees.stream()
                 .reduce((e1, e2) -> e1.getSalaire() > e2.getSalaire() ? e1 : e2);
+        System.out.println("question 5");
         System.out.println("L'employé avec le salaire le plus élevé est : " + employeMaxSalaire.get());
         // Q6)
         String nomsConcatenes = employees.stream()
                         .map(Employee::getNom)
                         .reduce("", (noms, nom) -> noms + nom + " ");
+        System.out.println("question 6");
         System.out.println("Noms concaténés : " + nomsConcatenes.trim());
 
 

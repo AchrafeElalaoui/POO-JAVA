@@ -1,5 +1,5 @@
-# TP3
-In this practical work we will manage "exceptions",to do that we're going to solve tree exercises.
+# TP4
+In this practical work we will manage "Collections",to do that we're going to solve tree exercises.
 to see the practical work click
 ## Exercises 1
 In this Exercise we will manage "Lists" ,we will create a class named `Produit`, and we will use a `List` of it, and solve these questions :
