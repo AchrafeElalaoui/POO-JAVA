@@ -1,11 +1,16 @@
-package Exercice1;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-public class GestionProduitsApp {
-    public static void main(String[] args) {
+# TP3
+In this practical work we will manage "exceptions",to do that we're going to solve tree exercises.
+to see the practical work click
+## Exercises 1
+In this Exercise we will manage "Lists" ,we will create a class named `Produit`, and we will use a `List` of it, and solve these questions :
+1. Add products.
+2. Remove a product by index.
+3. Display the list of products.
+4. Modify a product by index.
+5. Search for a product by the name typed by the user
+The solution of these questions is shown in the following code :
+```java
+public static void main(String[] args) {
         List<Produit> produits = new ArrayList();
         //Add products.
         produits.add(new Produit(1, "Pizza", 200.0));
@@ -33,5 +38,5 @@ public class GestionProduitsApp {
         if(i==produits.size()){
             System.out.println("Produit n'existe pas !");
         }
-    }
 }
+```
