@@ -139,3 +139,49 @@ le max des notes est : 15.0
 le min des notes est : 13.0
 la note 20 n'exist pas
 ````
+## Exercises 3
+In this Exercise we will manage "Sets",we will Create two Sets of type HashSet named groupeA and groupeB, containing the names of the students from groups A and B, and solve these questions :
+1. Add student names to each HashSet.
+2. Display the intersection of the two HashSets.
+3. Display the union of the two HashSets.
+The solution of these questions is shown in the following code :
+```java
+public static void main(String[] args) {
+    HashSet<String> groupA = new HashSet<>();
+    HashSet<String> groupB = new HashSet<>();
+    //1)
+    groupA.add("Achraf el");
+    groupA.add("salim el");
+    groupB.add("Achraf el");
+    groupB.add("amin el");
+    groupB.add("hossam el");
+    //2)
+    System.out.println("l’intersection des deux HashSets :");
+    for (String etA : groupA) {
+        for (String etB : groupB) {
+            if (etA.equals(etB)) {
+                System.out.println(etA);
+            }
+        }
+    }
+    //3)
+    System.out.println("l’union des deux HashSets :");
+    for (String etA : groupA) {
+        System.out.println(etA);
+    }
+    for (String etB : groupB) {
+        System.out.println(etB);
+    }
+}
+```
+the result :
+````text
+l’intersection des deux HashSets :
+Achraf el
+l’union des deux HashSets :
+Achraf el
+salim el
+amin el
+hossam el
+Achraf el
+````
