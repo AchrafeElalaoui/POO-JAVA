@@ -62,6 +62,7 @@ In this Exercise we will manage "Maps" ,we will create  a map `qde` of type Hash
 4. Display the size of the map.
 5. Display the average, maximum, and minimum grade.
 6. Check if there is a grade equal to 20.
+
 And after each operation, display the list using the `forEach` loop with a lambda expression.
 The solution of these questions is shown in the following code :
 ```java
