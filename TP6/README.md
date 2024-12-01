@@ -66,7 +66,7 @@ The application is designed with a clear structure to ensure scalability and mai
 
 ## Demonstration
 
-Watch a video demonstration of the application: [School Management System - Video Demo](https://example.com/demo)
+Watch a video demonstration of the application: [School Management System - Video Demo](https://vimeo.com/1035020202/2ea483b7e3?share=copy)
 
 ---
 
