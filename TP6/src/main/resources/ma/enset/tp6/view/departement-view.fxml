@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="ma.enset.tp6.controller.DepartementController">
+    <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="671.0" prefWidth="809.0">
+            <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                            <AnchorPane layoutX="14.0" layoutY="310.0" prefHeight="340.0" prefWidth="969.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: #dafcd6;">
+                                <children>
+                                    <TableView fx:id="departTableView" layoutX="165.0" layoutY="66.0" prefHeight="247.0" prefWidth="396.0" style="-fx-border-radius: 10; -fx-border-color: black;">
+                                        <columns>
+                                            <TableColumn fx:id="DepartTableColumnId" prefWidth="124.0" text="Id" />
+                                            <TableColumn fx:id="departTableColumnNom" prefWidth="132.0" text="Nom" />
+                                            <TableColumn fx:id="departTableColumnActions" prefWidth="280.0" text="Actions" />
+                                        </columns>
+                                    </TableView>
+                                    <TextField fx:id="departFieldSearch" layoutX="165.0" layoutY="20.0" prefHeight="25.0" prefWidth="201.0" promptText="search....">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </TextField>
+                                    <Button fx:id="searchBtn" onAction="#hSearch" layoutX="397.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="chercher" />
+                                </children>
+                            </AnchorPane>
+                            <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="285.0" prefWidth="968.0" style="-fx-border-color: BLACK; -fx-border-radius: 15; -fx-background-color: #dafcd6;">
+                                <children>
+                                    <TextField fx:id="departFieldNom" layoutX="204.0" layoutY="138.0" prefHeight="25.0" prefWidth="198.0" promptText="Nom " />
+                                    <Label fx:id="departLabelNom" layoutX="73.0" layoutY="142.0" text="Nom :" />
+                                    <Button fx:id="departButtonClear" onAction="#hClear" layoutX="731.0" layoutY="129.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="Nettoyer" />
+                                    <Button fx:id="departButtonAdd" onAction="#hAjouter" layoutX="477.0" layoutY="129.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="92.0" text="Ajouter" />
+                                </children>
+                            </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

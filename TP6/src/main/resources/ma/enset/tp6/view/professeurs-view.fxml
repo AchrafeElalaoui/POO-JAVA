@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="671.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="ma.enset.tp6.controller.ProfesseurController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane layoutX="14.0" layoutY="354.0" prefHeight="296.0" prefWidth="969.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: #dafcd6;">
+                            <children>
+                                <TableView fx:id="profTableView" layoutX="11.0" layoutY="42.0" prefHeight="247.0" prefWidth="947.0" style="-fx-border-radius: 10; -fx-border-color: black;">
+                                    <columns>
+                                        <TableColumn fx:id="profTableColumnId" prefWidth="60.0" text="Id" />
+                                        <TableColumn fx:id="profTableColumnNom" prefWidth="100.0" text="Nom" />
+                                        <TableColumn fx:id="profTableColumnPrenom" prefWidth="100.0" text="Prenom" />
+                                        <TableColumn fx:id="profTableColumnAdresse" prefWidth="100.0" text="Adresse" />
+                                        <TableColumn fx:id="profTableColumnCin" prefWidth="100.0" text="Cin" />
+                                        <TableColumn fx:id="profTableColumnTelephon" prefWidth="100.0" text="Telephon" />
+                                        <TableColumn fx:id="profTableColumnEmail" minWidth="0.0" prefWidth="110.0" text="Email" />
+                                        <TableColumn fx:id="profTableColumnDate" prefWidth="100.0" text="Date_recrutement" />
+                                        <TableColumn fx:id="profTableColumnDepart" prefWidth="100.0" text="nom_Departement" />
+                                        <TableColumn fx:id="profTableColumnActions" prefWidth="240.0" text="Actions" />
+                                    </columns>
+                                </TableView>
+                                <TextField fx:id="profFieldSearch" layoutX="11.0" layoutY="8.0" prefHeight="25.0" prefWidth="201.0" promptText="search....">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <Button fx:id="searchBtn" onAction="#hSearch" layoutX="236.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="chercher" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="327.0" prefWidth="968.0" style="-fx-border-color: BLACK; -fx-border-radius: 15; -fx-background-color: #dafcd6;">
+                            <children>
+                                <TextField fx:id="profFieldNom" layoutX="211.0" layoutY="50.0" prefHeight="25.0" prefWidth="198.0" promptText="Nom " />
+                                <TextField fx:id="profFieldPrenom" layoutX="211.0" layoutY="83.0" prefWidth="198.0" promptText="Prenom " />
+                                <TextField fx:id="profFieldAdresse" layoutX="211.0" layoutY="117.0" prefWidth="198.0" promptText="Adresse " />
+                                <TextField fx:id="profFieldCin" layoutX="211.0" layoutY="151.0" prefWidth="198.0" promptText="Cin " />
+                                <TextField fx:id="profFieldTelephon" layoutX="211.0" layoutY="184.0" prefWidth="198.0" promptText="Telephon " />
+                                <TextField fx:id="profFieldEmail" layoutX="211.0" layoutY="217.0" prefWidth="198.0" promptText="Email " />
+                                <Label fx:id="profLableNom" layoutX="88.0" layoutY="54.0" text="Nom :" />
+                                <Label fx:id="profLablePrenom" layoutX="88.0" layoutY="87.0" text="Prenom :" />
+                                <Label fx:id="profLableAdresse" layoutX="88.0" layoutY="121.0" text="Adresse :" />
+                                <Label fx:id="profLableCin" layoutX="88.0" layoutY="155.0" text="Cin :" />
+                                <Label fx:id="profLableTelephon" layoutX="88.0" layoutY="188.0" text="Telephon :" />
+                                <Label fx:id="profLableIdEmail" layoutX="88.0" layoutY="221.0" text="Email :" />
+                                <Label fx:id="profLableDate" layoutX="88.0" layoutY="256.0" text="Date_recrutement :" />
+                                <Label fx:id="profLableDepart" layoutX="88.0" layoutY="287.0" text="Id_departement :" />
+                                <ComboBox fx:id="departmentComboBox" layoutX="211.0" layoutY="283.0" prefWidth="198.0" promptText="departement"/>
+                                <Button fx:id="profButtonClear" onAction="#hClear" layoutX="734.0" layoutY="197.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="Nettoyer" />
+                                <Button fx:id="profButtonAdd" onAction="#hAjouter" layoutX="523.0" layoutY="197.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="92.0" text="Ajouter" />
+                                <DatePicker fx:id="profFieldDate"   layoutX="209.0" layoutY="252.0" prefHeight="25.0" prefWidth="198.0" promptText="Date_recrutement " />
+
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
