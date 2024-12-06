@@ -1,6 +1,6 @@
 # TP7
 In this practical work we will manage "exceptions",to do that we gonna solve tree exercises.
-to see the practical work click [here](https://github.com/AchrafeElalaoui/POO-JAVA/blob/main/TP3/tp3.pdf) . 
+to see the practical work click [here](TP7/tp7.pdf) . 
 ## Exercises 1
 In this exercise we will create a java programme that allows us to do the simulation the command `ls` .
 we will do it with the following code :
