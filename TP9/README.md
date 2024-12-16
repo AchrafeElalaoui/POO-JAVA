@@ -104,7 +104,7 @@ public class Client {
 }
 ```
 ##### The result
-[Result](ex1.png)
+![Result](ex1.png)
 
 # EXERCISE 2
 In this exercise, we implement a simple file server with multi-client support in Java.
