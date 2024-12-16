@@ -1,0 +1,12 @@
+On souhaite faire la mise en place d'un serveur de fichiers simple utilisant des sockets en Java
+avec la gestion de plusieurs clients grâce à des threads. L'objectif est de permettre à plusieurs
+clients de se connecter au serveur, de demander des fichiers spécifiques et de recevoir le contenu
+de ces fichiers. Pour cela vous devez suivre les renseignements suivants :
+1. Serveur de fichiers : Un serveur est créé pour écouter les connexions entrantes sur un
+port spécifique. Le serveur doit être capable de gérer simultanément plusieurs clients.
+2. Connexions clients : Chaque fois qu'un client se connecte au serveur, le serveur crée
+un thread distinct pour gérer cette connexion spécifique.
+3. Demande de fichiers : Les clients envoient au serveur le nom du fichier qu'ils
+souhaitent recevoir. Cette information est transmise via le flux d'entrée.
+4. Envoi de fichiers : Le serveur vérifie si le fichier demandé existe. S'il existe, le contenu
+du fichier est lu et envoyé au client via le flux de sortie.
