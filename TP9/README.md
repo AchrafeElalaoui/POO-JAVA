@@ -222,4 +222,4 @@ public class FileClient {
 
 ```
 ##### The result
-[Result](ex2.png)
+![Result](ex2.png)
